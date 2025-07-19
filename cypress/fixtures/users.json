@@ -25,9 +25,9 @@
       "employeeId": "0001"
     },
     "employee2": {
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "middleName": "Elizabeth",
+      "firstName": "Daniel",
+      "lastName": "Putra",
+      "middleName": "Baskara",
       "employeeId": "0002"
     },
     "testEmployee": {

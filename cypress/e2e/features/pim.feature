@@ -12,7 +12,7 @@ Feature: PIM Employee Management
     Examples:
       | firstName | lastName  |
       | Arda      | Arifin    |
-      | Jane      | Smith     |
+      | Daniel    | Putra     |
 
   Scenario: Add employee with existing employee ID (Negative Test)
     Given an employee with ID "0001" already exists in the system
@@ -22,11 +22,11 @@ Feature: PIM Employee Management
   Scenario: Search for existing employee
     Given an employee "Arda Arifin" exists in the system
     When user searches for employee "Arda Arifin"
-    Then user should see "Arda Arifin" in search results
+    Then user should see "Arda Arifin" in employee search results
 
 
   Scenario: Delete employee record
-    Given an employee "Jane Smith" exists in the system
-    When user deletes employee "Jane Smith"
+    Given an employee "Daniel Putra" exists in the system
+    When user deletes employee "Daniel Putra"
     Then user should see employee deletion success message
-    And "Jane Smith" should not appear in employee list
+    And "Daniel Putra" should not appear in employee list

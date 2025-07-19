@@ -136,7 +136,7 @@ class PIMPage {
       .should("be.visible")
       .and("contain.text", "Employee Id already exists");
   }
-
+  
   searchEmployeeByName(employeeName) {
     // Type in the employee name search field and wait for autocomplete
     this.searchEmployeeNameInput
@@ -152,6 +152,17 @@ class PIMPage {
       .within(() => {
         cy.contains(employeeName).click();
       });
+
+    this.clickSearch();
+  }
+
+  // New simple search method - untuk scenario delete dan verification sederhana
+  searchEmployeeByNameSimple(employeeName) {
+    // Just type the full name and click search - no autocomplete interaction
+    this.searchEmployeeNameInput
+      .should("be.visible")
+      .clear()
+      .type(employeeName);
 
     this.clickSearch();
   }
@@ -205,8 +216,9 @@ class PIMPage {
       });
   }
 
+  // Updated delete method menggunakan simple search
   deleteEmployee(employeeName) {
-    this.searchEmployeeByName(employeeName);
+    this.searchEmployeeByNameSimple(employeeName);
     cy.wait(2000);
 
     // Click delete button for the first (and should be only) result
@@ -215,6 +227,12 @@ class PIMPage {
     // Confirm deletion
     this.confirmDeleteButton.click();
     cy.wait(1000);
+  }
+
+  // Method untuk verify employee sudah terhapus - menggunakan simple search
+  verifyEmployeeDeleted(employeeName) {
+    this.searchEmployeeByNameSimple(employeeName);
+    this.verifyEmployeeNotInTable(employeeName);
   }
 
   addNewEmployee(firstName, lastName, middleName = "") {
@@ -237,6 +255,7 @@ class PIMPage {
     this.verifyPIMPageLoaded();
   }
 
+  // Method ini tetap menggunakan autocomplete karena untuk check existence perlu lebih akurat
   checkEmployeeExists(employeeName) {
     this.clickReset();
     this.searchEmployeeByName(employeeName);

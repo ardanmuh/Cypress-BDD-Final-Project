@@ -6,6 +6,9 @@ class DashboardPage {
   get adminMenu() {
     return cy.get(".oxd-main-menu-item").contains("Admin");
   }
+  get pimMenu() {
+    return cy.get(".oxd-main-menu-item").contains("PIM");
+  }
   get userDropdown() {
     return cy.get(".oxd-userdropdown-tab");
   }
@@ -25,6 +28,11 @@ class DashboardPage {
   navigateToAdmin() {
     this.adminMenu.click();
     cy.url().should("include", "/admin/viewSystemUsers");
+  }
+
+  navigateToPIM() {
+    this.pimMenu.click();
+    cy.url().should("include", "/pim/viewEmployeeList");
   }
 
   logout() {

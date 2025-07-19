@@ -16,5 +16,25 @@
       "username": "cypressuser2",
       "role": "Admin"
     }
+  },
+  "employees": {
+    "employee1": {
+      "firstName": "Arda",
+      "lastName": "Arifin",
+      "middleName": "Muh",
+      "employeeId": "0001"
+    },
+    "employee2": {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "middleName": "Elizabeth",
+      "employeeId": "0002"
+    },
+    "testEmployee": {
+      "firstName": "Test",
+      "lastName": "Employee",
+      "middleName": "",
+      "employeeId": "9999"
+    }
   }
 }

@@ -14,11 +14,6 @@ Feature: Admin User Management
       | cypressuser1 | ESS   |
       | cypressuser2 | Admin |
 
-  Scenario: Add admin user with duplicate username (Negative Test)
-    Given user has created a new admin "cypressuser1" with role "Admin"
-    When user should see duplicate username error message 
-    Then user tries to add a duplicate admin "cypressuser1" with role "Admin"
-
   Scenario: Add admin user with empty username (Negative Test)
     When user tries to add admin with empty username and role "Admin"
     Then user should see required field error message

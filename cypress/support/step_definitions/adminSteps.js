@@ -1,24 +1,10 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import LoginPage from "../../pages/LoginPage";
-import DashboardPage from "../../pages/DashboardPage";
 import AdminPage from "../../pages/AdminPage";
 
-const loginPage = new LoginPage();
-const dashboardPage = new DashboardPage();
 const adminPage = new AdminPage();
 
-Given("user is logged in as admin", () => {
-  cy.fixture("users").then((users) => {
-    loginPage.visit();
-    loginPage.login(users.validUser.username, users.validUser.password);
-    dashboardPage.verifyDashboardLoaded();
-  });
-});
-
-Given("user navigates to Admin page", () => {
-  dashboardPage.navigateToAdmin();
-  adminPage.verifyAdminPageLoaded();
-});
+// Note: Common steps like "user is logged in as admin" and "user navigates to Admin page"
+// are now defined in commonSteps.js to avoid duplication
 
 // Step for Scenario Outline: Add new admin user
 When("user adds a new admin {string} with role {string}", (username, role) => {

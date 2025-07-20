@@ -36,5 +36,28 @@
       "middleName": "",
       "employeeId": "9999"
     }
+  },
+  "jobVacancies": {
+    "vacancy1": {
+      "jobTitle": "Senior QA Engineer",
+      "position": "QA Lead",
+      "hiringManager": "Admin",
+      "numOfPositions": "2",
+      "description": "Senior QA Engineer position focusing on automation and manual testing"
+    },
+    "vacancy2": {
+      "jobTitle": "Frontend Developer",
+      "position": "Software Engineer",
+      "hiringManager": "Admin",
+      "numOfPositions": "3",
+      "description": "Frontend Developer position focusing on React and JavaScript development"
+    },
+    "vacancy3": {
+      "jobTitle": "Backend Developer",
+      "position": "Software Engineer",
+      "hiringManager": "Admin",
+      "numOfPositions": "1",
+      "description": "Backend Developer position focusing on Node.js and database management"
+    }
   }
 }

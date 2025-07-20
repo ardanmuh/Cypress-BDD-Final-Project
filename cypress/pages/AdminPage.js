@@ -44,6 +44,7 @@ class AdminPage {
   get toastText() {
     return cy.get(".oxd-toast-container .oxd-text--toast-message");
   }
+
   get searchUsernameInput() {
     // Fix: Gunakan selector yang lebih spesifik untuk search username di admin page
     return cy
@@ -135,9 +136,6 @@ class AdminPage {
           .should("be.visible")
           .and("contain.text", "Successfully Saved");
       });
-
-    // Alternative: Coba selector yang lebih umum jika yang atas gagal
-    // cy.contains("Successfully Saved", { timeout: 10000 }).should("be.visible");
   }
 
   verifyDeleteSuccessMessage() {

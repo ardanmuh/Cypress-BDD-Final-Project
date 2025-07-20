@@ -1,0 +1,137 @@
+{
+  "navigation": {
+    "menuItems": [
+      {
+        "name": "Admin",
+        "url": "/admin/viewSystemUsers",
+        "title": "Admin"
+      },
+      {
+        "name": "PIM",
+        "url": "/pim/viewEmployeeList",
+        "title": "PIM"
+      },
+      {
+        "name": "Leave",
+        "url": "/leave/viewLeaveList",
+        "title": "Leave"
+      },
+      {
+        "name": "Time",
+        "url": "/time/viewEmployeeTimesheet",
+        "title": "Time"
+      },
+      {
+        "name": "Recruitment",
+        "url": "/recruitment/viewCandidates",
+        "title": "Recruitment"
+      },
+      {
+        "name": "My Info",
+        "url": "/pim/viewPersonalDetails",
+        "title": "Personal Details"
+      },
+      {
+        "name": "Performance",
+        "url": "/performance/searchEvaluatePerformanceReview",
+        "title": "Performance"
+      },
+      {
+        "name": "Directory",
+        "url": "/directory/viewDirectory",
+        "title": "Directory"
+      },
+      {
+        "name": "Maintenance",
+        "url": "/maintenance/purgeEmployee",
+        "title": "Maintenance"
+      },
+      {
+        "name": "Claim",
+        "url": "/claim/viewAssignClaim",
+        "title": "Claim"
+      },
+      {
+        "name": "Buzz",
+        "url": "/buzz/viewBuzz",
+        "title": "Buzz"
+      }
+    ]
+  },
+  "widgets": {
+    "expectedWidgets": [
+      {
+        "name": "Time at Work",
+        "selector": ".oxd-dashboard-widget",
+        "description": "Displays employee time tracking information"
+      },
+      {
+        "name": "My Actions",
+        "selector": ".oxd-dashboard-widget",
+        "description": "Shows pending actions and tasks"
+      },
+      {
+        "name": "Quick Launch",
+        "selector": ".orangehrm-dashboard-widget",
+        "description": "Quick access to common functions"
+      },
+      {
+        "name": "Buzz Latest Posts",
+        "selector": ".oxd-dashboard-widget",
+        "description": "Shows recent buzz posts and updates"
+      },
+      {
+        "name": "Employee Distribution",
+        "selector": ".orangehrm-dashboard-widget",
+        "description": "Chart showing employee distribution by unit"
+      }
+    ]
+  },
+  "userDropdownOptions": ["About", "Support", "Change Password", "Logout"],
+  "dashboardElements": {
+    "header": {
+      "title": "Dashboard",
+      "selector": ".oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module"
+    },
+    "userProfile": {
+      "selector": ".oxd-userdropdown-tab",
+      "dropdownSelector": ".oxd-dropdown-menu"
+    },
+    "navigation": {
+      "selector": ".oxd-main-menu",
+      "itemSelector": ".oxd-main-menu-item"
+    },
+    "widgets": {
+      "containerSelector": ".oxd-dashboard-row",
+      "widgetSelector": ".oxd-dashboard-widget, .orangehrm-dashboard-widget"
+    }
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 720
+    },
+    "tablet": {
+      "width": 768,
+      "height": 1024
+    },
+    "mobile": {
+      "width": 375,
+      "height": 667
+    }
+  },
+  "testData": {
+    "validUser": {
+      "username": "Admin",
+      "password": "admin123",
+      "role": "Admin"
+    },
+    "breadcrumbs": ["Dashboard", "Admin", "PIM", "Leave", "Time"],
+    "commonUrls": {
+      "dashboard": "/dashboard/index",
+      "login": "/auth/login",
+      "admin": "/admin/viewSystemUsers",
+      "pim": "/pim/viewEmployeeList"
+    }
+  }
+}

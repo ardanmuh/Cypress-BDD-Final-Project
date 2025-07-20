@@ -39,3 +39,17 @@ Given("user navigates to PIM page", () => {
     .contains("Add")
     .should("be.visible");
 });
+
+// New step for Recruitment page navigation
+Given("user navigates to Recruitment page", () => {
+  dashboardPage.navigateToRecruitment();
+  // Verify Recruitment page loaded
+  cy.url().should("include", "/recruitment/viewJobVacancy");
+  cy.get(".oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module").should(
+    "contain.text",
+    "Recruitment"
+  );
+  cy.get(".oxd-button.oxd-button--medium.oxd-button--secondary")
+    .contains("Add")
+    .should("be.visible");
+});

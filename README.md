@@ -16,29 +16,29 @@ Cypress-BDD-Final-Project/
 ├── cypress/
 │   ├── e2e/                           # Test files
 │   │   ├── features/                  # Gherkin feature files (.feature)
+│   │   │   ├── admin.feature
+│   │   │   ├── dashboard.feature
 │   │   │   ├── login.feature
-│   │   │   ├── registration.feature
-│   │   │   └── dashboard.feature
-│   │   └── step_definitions/          # Step definitions (.js/.ts)
-│   │       ├── login_steps.js
-│   │       ├── registration_steps.js
-│   │       └── common_steps.js
-│   ├── fixtures/                      # Test data files
-│   │   ├── users.json
-│   │   ├── testdata.json
-│   │   └── config.json
+│   │   │   └── pim.feature
+│   │   ├── fixtures/                      # Test data files
+│   │   │   ├── users.json
+│   │   │   └── dashboard.json
+│   ├── pages/              # Page Object Model files
+│   │   │   ├── AdminPage.js
+│   │   │   ├── DashboardPage.js
+│   │   │   ├── LoginPage.js
+│   │   │   └── PIMPage.js
 │   ├── support/                       # Support files
+│   │   └── step_definitions/          # Step definitions (.js/.ts)
+│   │   │   ├── adminSteps.js
+│   │   │   ├── commonStepsteps.js
+│   │   │   ├── dashboardStepsteps.js
+│   │   │   ├── loginStepsteps.js
+│   │   │   └── pimSteps.js
 │   │   ├── commands.js                # Custom commands
 │   │   ├── e2e.js                     # Global configurations
-│   │   ├── page_objects/              # Page Object Model files
-│   │   │   ├── LoginPage.js
-│   │   │   ├── DashboardPage.js
-│   │   │   └── BasePage.js
-│   │   └── utilities/                 # Utility functions
-│   │       ├── helpers.js
-│   │       └── constants.js
 │   └── screenshots/                   # Screenshots from failed tests
-├── reports/                           # Test reports
+├── mochawesome=repor/                           # Test reports
 │   ├── html/
 │   └── json/
 ├── cypress.config.js                  # Main Cypress configuration
